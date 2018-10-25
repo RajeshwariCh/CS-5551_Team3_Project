@@ -1,0 +1,47 @@
+<html>
+<head>
+<!-- Bootstrap CDN Library -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="../HCDMS/HCDMS.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <!-- FireBase Repository -->
+<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+    <!--Tessreact-->
+<script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js"></script>
+<script src="HomePage.js"></script>
+</head>
+<body>
+<div ng-app="homeApp" ng-controller="homeController">
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand">HealthCare Content Data Management System</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="../ProfileInfo/profile_info.html"><span class="glyphicon glyphicon-user"></span> Profile Info</a></li>
+            <li class="active"><a href="../Home/HomePage.html">Home</a></li>
+            <li><a href="../Content/Content.html">Content</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="input-group">
+            </div>
+        </form>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="../ContactInfo/Contact_info.html">Contact Us</a></li>
+            <li><a href="../HCDMS/HCDMS.html"><span class="glyphicon glyphicon glyphicon-off"></span> Logout</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="text-center registration uploadImage row">
+<div class="col-sm-4 fontstyle uploadLabel">Extract the Text:</div>
+<div class="col-sm-4"><input type="file" ng-model="fileUploaded" value="Upload" id="fileImageUploaded"></div><br><br>
+<div class="col-sm-4 fontstyle uploadLabel">Upload your Image:</div>
+<div class="col-sm-4"><input type="file" ng-model="fileImageUploaded" value="Upload" id="fileUploader"></div><br><br>
+<button class="btn btn-primary text-center" ng-click="uploadImage()">Upload Info</button>
+<div id="ocr_status"></div>
+</div>
+</div>
+</body>
+</html>

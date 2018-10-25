@@ -1,0 +1,17 @@
+.imageBlock{
+    display:flex;
+    background: lavender;
+    margin: 0 auto;
+    margin-left:1rem;
+    margin-right:1rem;
+}
+.imgStyle{
+    width:200px;
+    height:200px;
+    display: inline-block;
+    margin:2rem;
+}
+.infoStyle{
+    font-weight: bold;
+    margin:0 auto;
+}
